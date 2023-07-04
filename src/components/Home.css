@@ -1,0 +1,32 @@
+.mainContainer {
+    border: 3px solid #cfbbbb;
+    background: linear-gradient(to right, #FF4B2B, #FF416C);
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+.x {
+    float: right;
+}
+
+.loadBtn {
+    background-color: black;
+    color: white;
+}
+
+.addIcon {
+    border-radius: 25px;
+    position: absolute;
+    right: 10%;
+}
+
+.contentFontSize {
+    font-size: 20px;
+}
+
+.warning {
+    mix-blend-mode: darken
+}
