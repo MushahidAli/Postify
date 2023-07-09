@@ -16,6 +16,10 @@
   -webkit-text-size-adjust: 100%;
 }
 
+input {
+  color: black;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
