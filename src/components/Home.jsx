@@ -110,11 +110,13 @@ export default function Home() {
 
         <div id="posting" style={{ margin: '5%' }}>
 
-        <Routes>
-            <Route path="/viewmyposts" element={<ViewMyPosts />} />
-            <Route path="/viewallposts" element={<ViewAllPosts />} />
-            <Route path="*" element={<FileNotFound />} />
-        </Routes>
+            <Routes>
+                <Route path="/" element={<ViewMyPosts />} />
+                <Route path="/index.html" element={<ViewMyPosts />} />
+                <Route path="/viewmyposts" element={<ViewMyPosts />} />
+                <Route path="/viewallposts" element={<ViewAllPosts />} />
+                <Route path="*" element={<FileNotFound />} />
+            </Routes>
 
         </div>
 
