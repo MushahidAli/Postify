@@ -50,7 +50,7 @@ export default function Logon() {
     };
 
     const handleSubmit = (e) => {
-        setMessage(`Registration Was Successful!`)
+        setMessage(`[ Registration Was Successful! ]`)
         e.preventDefault();
 
         axios.get(domain + `sign_up/${data.name}/${data.email.toLowerCase()}/${data.password}/${personalContent}`)
@@ -92,7 +92,7 @@ export default function Logon() {
         }
         else {
             localStorage.removeItem("login");
-            setMessageForLogin("Invalid Email or Password. Please Try again.");
+            setMessageForLogin("[ Invalid Email or Password. Please Try again. ]");
         }
 
         console.log(localStorage.getItem("login"));
@@ -106,10 +106,10 @@ export default function Logon() {
                 <div className="form-container sign-up-container">
                     <form onSubmit={handleSubmit}>
                         <h1>Create Account</h1>
-                        <input type="text" name="name" placeholder="Name" onChange={handleChange} required />
+                        <input type="text" name="name" placeholder="Name" onChange={handleChange} required /><br />
                         <input type="email" name="email" placeholder="Email" ref={checkRef} onBlur={checkAvailability} onChange={handleChange} required />
-                        <span id="availability">{emailExists}</span>
-                        <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
+                        <span className='messageCheck' id="availability">{emailExists}</span>
+                        <input type="password" name="password" placeholder="Password" onChange={handleChange} required /><br />
                         <button id="mySignupBtn" className='btnLogon'>Sign Up</button>
                         <br />
                         <div className='successMessage'>
@@ -120,7 +120,7 @@ export default function Logon() {
                 <div className="form-container sign-in-container">
                     <form onSubmit={handleSigninSubmit}>
                         <h1>Sign in</h1>
-                        <input type="email" name="emailAddress" id="emailAddress" placeholder="Email" onChange={handleSigninChange} required />
+                        <input type="email" name="emailAddress" id="emailAddress" placeholder="Email" onChange={handleSigninChange} required /><br />
                         <input type="password" name="passwordContent" id="passwordContent" placeholder="Password" onChange={handleSigninChange} required /><br />
                         <button className='btnLogon'>Sign In</button>
                         <br />
